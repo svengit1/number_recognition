@@ -1,9 +1,11 @@
 from PIL import Image
 
+# choosing an image and opening it
 im = Image.open("./archive/CompleteImages/All data (Compressed)/0/0_2_2.png")
 im = im.convert("L")
 
 
+# function creates a matrix of 1's and 0's
 def create_matirx(image):
     image = image.convert("L")
     pix = image.load()
@@ -25,6 +27,3 @@ matrix = create_matirx(im)
 
 for row in matrix:
     print(row)
-
-
-
